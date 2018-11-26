@@ -1,0 +1,65 @@
+﻿<Window x:Class="Sneg.Screens.PostGameScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sneg.Screens"
+        mc:Ignorable="d"
+        Title="PostGameScreen" Height="840" Width="1020"
+        Background="Black"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+            
+            <MediaElement Name="audioElement"
+                          Visibility="Collapsed"
+                          LoadedBehavior="Manual"
+                          />
+
+        <Grid>
+            <Image Name="gameOverImage"
+                    Source="/Assets/SnegPlompf.png"/>
+            
+            <Label Name="endScoreLabel"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontSize="50"
+                   Margin="0,0,0,30"/>
+        </Grid>
+
+            
+
+        
+        
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Name="retryBtn"
+                    Height="40"
+                    Width="100"
+                    Foreground="White"
+                    Background="Black"
+                    Content="Retry?"
+                    FontSize="30"
+                    Margin="1"
+                    Click="retryBtn_Click"
+                    />
+            <Button Name="closeGameBtn"
+                    Height="40"
+                    Width="100"
+                    Foreground="White"
+                    Background="Black"
+                    Content="Close?"
+                    FontSize="30"
+                    Margin="1"
+                    Click="closeGameBtn_Click"/>
+        </StackPanel>
+
+
+        
+    </Grid>
+</Window>
